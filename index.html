@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemogoblin</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- icon -->
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <div class="header-content">
+                <h1>HEMOGOBLIN</h1>
+                <p>Kuliner Ajaib Tanjung Priok </p>
+                <div class="ratings">
+                    <span>⭐ 4.9 (89532)</span>
+                </div>
+                <a class="group-order-btn" href="https://wa.me/6285714398875" target="_blank">Hubungi Sebastian Ganteng</a>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="menu-section">
+                <div class="review">
+                    <h3>Review Pelanggan</h3>
+                    <div class="review-item">
+                        <div class="reviewer">
+                            <div class="reviewer-info">
+                                <h4>John Cena  ⭐⭐⭐⭐⭐</h4>
+                                <p>Anjirlah, fak kalo kata gw teh! </p>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="reviewer-info">
+                                <h4>Mario Teguh  ⭐⭐⭐</h4>
+                                <p>Super sekali! Tapi alangkah lebih super jika gratis. Hehehe.</p>
+                            </div>
+                            <div class="reply">
+                                <h4>HEMOGOBLIN</h4>
+                                <p>Ribut aja sinilah pak botak!</p>
+                            </div>
+                            <div class="reply-customer">
+                                <h4>Mario Teguh</h4>
+                                <p>Ayolah anying sini!</p>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="reviewer-info">
+                                <h4>Genji, Serizawa, & Brothers  ⭐⭐⭐⭐⭐</h4>
+                                <p>Pulang tawuran, ngopi sambil udud di sini sih kacau banget, lur.. </p>
+                            </div>
+                        </div> 
+
+                    </div>
+                </div>
+                <h2>Menu</h2>
+                <div class="menu-category">
+                    <h3>Makanan</h3>
+                    <div class="menu-items" id="menu-makanan">
+                        <div class="menu-item">
+                            <img src="img/nasi-goreng.jpg" alt="Nasi Goreng">
+                            <h6>Terlaris</h6>
+                            <div class="item-details">
+                                <h4>Nasi Goreng Asik</h4>
+                                <h5>Nasi bukan sembarang nasi. Jumlah nasi ada 15.000 butir. Hitung Sendiri.</h5>
+                                <p>Rp 12.000</p>
+                                <button onclick="addToCart('Nasi Goreng', 12000)">Mau! </button>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/mie-goreng.jpg" alt="Mie Goreng">
+                            <h6>Lagi Promo!</h6>
+                            <div class="item-details">
+                                <h4>Mie Goreng Gemes</h4>
+                                <h5>Mie ini diracik dengan bumbu Indomie seperti di warkop pada umumnya.</h5>
+                                <p>Rp 9.500</p>
+                                <button onclick="addToCart('Mie Goreng', 12500)">Mau! </button>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/mie-rebus.jpg" alt="Mie Rebus">
+                            <div class="item-details">
+                                <h4>Mie Rebus Debus</h4>
+                                <h5>Dengan kuah air butek dibaluri remah-remah paku payung & kecupan dari aku.</h5>
+                                <p>Rp 12.500</p>
+                                <button onclick="addToCart('Mie Rebus', 12500)">Mau! </button>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/ayam-crispy.jpg" alt="Ayam Crispy">
+                            <div class="item-details">
+                                <h4>Ayam Manja</h4>
+                                <h5>Ayamnya dari kecil tajir. Dikasih makan  pizza, spaghetti, kadang nasi padang.</h5>
+                                <p>Rp 32.000</p>
+                                <button onclick="addToCart('Ayam Manja', 32000)">Mau! </button>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/nasi-hainam.jpg" alt="Nasi Hainam">
+                            <div class="item-details">
+                                <h4>Nasi Hainam Bengek</h4>
+                                <h5>Ayamnya dari kecil miskin. Sempet kena diare sama tipes sebelum dipotong.</h5>
+                                <p>Rp 25.000</p>
+                                <button onclick="addToCart('Nasi Hainam Bengek', 25000)">Mau! </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <h3>Minuman</h3>
+                    <div class="menu-items" id="menu-minuman">
+                        <div class="menu-item">
+                            <img src="img/lemon-tea.jpg" alt="Lemon Tea">
+                            <div class="item-details">
+                                <h4>Lemon Tea Tantrum</h4>
+                                <h5>Diperas dari keringet bapak-bapak yang lagi hantem anaknya tantrum minta aerox.</h5>
+                                <p>Rp 12.000</p>
+                                <button onclick="addToCart('Lemon Tea', 25000)">Mau! </button>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/kopi-susu.jpg" alt="Kopi Susu">
+                            <div class="item-details">
+                                <h4>Kopi Susu Anjay</h4>
+                                <h5>Kopi susu enak yang rasanya beda-beda tergantung mood saya. Hehehehe...</h5>
+                                <p>Rp 17.000</p>
+                                <button onclick="addToCart('Kopi Susu Anjay', 17000)">Mau! </button>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/es-jeruk.jpg" alt="Es Jeruk">
+                            <div class="item-details">
+                                <h4>Es Jeruk Surprise</h4>
+                                <h5>Kadang es jeruk, kadang es duren. Kenapa? Suka-suka saya lah.</h5>
+                                <p>Rp 14.500</p>
+                                <button onclick="addToCart('Es Jeruk Surprise', 14500)">Mau! </button>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/americano.jpg" alt="Americano">
+                            <div class="item-details">
+                                <h4>Amer Pake Es</h4>
+                                <h5>Kopi americano pake es batu. Bisa request pake bata merah ato batu kali.</h5>
+                                <p>Rp 15.000</p>
+                                <button onclick="addToCart('Amer Pake Es', 15000)">Mau! </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <h3>Snack</h3>
+                    <div class="menu-items" id="menu-snack">
+                        <div class="menu-item">
+                            <img src="img/kerupuk-udang.jpg" alt="kerupuk udang">
+                            <div class="item-details">
+                                <h4>Kerupuk Kriuk</h4>
+                                <h5>Kerupuk udang garing. Kayak lawakan yang lu kirim ke gebetan tp cuma di-read.</h5>
+                                <p>Rp 3.000</p>
+                                <button onclick="addToCart('Kerupuk Kriuk', 3000)">Mau! </button>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/french-fries.jpg" alt="French Fries">
+                            <div class="item-details">
+                                <h4>Kentang Uhuy</h4>
+                                <h5>Kentang banget kalo nggak beli kentang goreng sih. Kacau sih kalau nggak beli.</h5>
+                                <p>Rp 13.000</p>
+                                <button onclick="addToCart('Kentang Goreng Uhuy', 13000)">Mau! </button>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/karage.jpg" alt="Karage">
+                            <div class="item-details">
+                                <h4>Karage Jaksel</h4>
+                                <h5>Jujurly, ini redflag banget sih. Soalnya gue kayak addicted banget gitu.</h5>
+                                <p>Rp 27.000</p>
+                                <button onclick="addToCart('Karage Jaksel', 27000)">Mau! </button>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/spring-roll.jpg" alt="Spring Roll">
+                            <div class="item-details">
+                                <h4>Spring Roll Bekasi</h4>
+                                <h5>Sabi banget sih. Kalo lu nggak pesen, wah bader banget sih lu. Kaga danta.</h5>
+                                <p>Rp 20.500</p>
+                                <button onclick="addToCart('Spring Roll Bekasi', 20500)">Mau! </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-section">
+                <h2>Keranjang Belanja</h2>
+                <ul id="cart"></ul>
+                <div class="total-section">
+                    <h3>Total Belanja: Rp <span id="total">0</span></h3>
+                    <h3>Pajak (10%): Rp <span id="tax">0</span></h3>
+                    <h3>Ongkos Kirim: Rp <span id="delivery">0</span></h3>
+                    <h3>Biaya Layanan: Rp 2.000</h3>
+                    <h3>Total Pembayaran: Rp <span id="grand-total">0</span></h3>
+                </div>
+                <div class="address-section">
+                    <label for="delivery-address">Alamat Penerima:</label>
+                    <select id="delivery-address">
+                        <option value="5">Jl. Kebon Jeruk Raya No. 27, Jakarta Barat</option>
+                        <option value="10">Jl. Meruya Selatan No. 11, Jakarta Barat</option>
+                        <option value="15">Jl. Taman Aries No. 18, Jakarta Barat</option>
+                    </select>
+
+                    <p>Pembuat website tidak punya Google API, maap kalau belum bisa atur alamat sendiri. Hehehe. Ini website tester ajah. </p>
+                    <button class="calculate-btn" onclick="getDistance()">Hitung Ongkos Kirim</button>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Checkout</button>
+                <div class="video-section">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/GwYlNPc9uJ4?si=KVcmvqZtUVGl9BD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="music-player">
+                    <div class="music-info">
+                        <span id="song-title">Judul Lagu</span>
+                    </div>
+                    <audio id="audio-player" src="Kiki's Delivery Service - Umi No Mieru Machi Piano.mp3" loop></audio>
+                    <div class="controls">
+                        <button id="play-pause" onclick="togglePlayPause()">Play</button>
+                        <button id="loop" onclick="toggleLoop()">Loop</button>
+                    </div>
+                    <input type="range" id="time-slider" min="0" value="0" step="1" onchange="seekAudio()">
+                    <div class="time-info">
+                        <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Sebastianus Lukito</p>
+    </footer>
+    <div id="popup" class="popup">Berhasil Ditambahkan</div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

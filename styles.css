@@ -607,6 +607,29 @@ input[type="range"]::-moz-range-thumb {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        width: 95%;
+    }
+
+    .header .logo {
+        width: 200px;
+        height: 200px;
+        margin-block: 20px;
+    }
+
+    .header-content {
+        text-align: center;
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .header-content h1 {
+        font-size: 2.5em;
+    }
+
     .main-content {
         flex-direction: column;
     }
